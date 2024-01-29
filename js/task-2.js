@@ -27,14 +27,14 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-const createEl = ({ url, alt }) =>
+const addEl = ({ url, alt }) =>
   `<li  class="li">
        <img class="img"
        src="${url}"
         alt="${alt}" />
   </li>`;
 
-const elem = images.map(createEl).join('');
+const elem = images.map(addEl).join('');
 
 const gallery = document.querySelector('.gallery');
 gallery.insertAdjacentHTML('beforeend', elem);
